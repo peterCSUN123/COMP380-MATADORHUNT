@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fbf8f8;
+}
+
+.site-header {
+    background-color: white;
+    border-bottom: 1px solid #eadbdf;
+    padding: 18px 24px;
+}
+
+.site-header a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 1232px;
+    margin: 0 auto;
+    text-decoration: none;
+    color: #242024;
+}
+
+.site-header img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.site-header span {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.site-header b {
+    color: #8f1938;
+}
