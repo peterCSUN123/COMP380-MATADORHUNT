@@ -12,6 +12,10 @@ body {
     background-color: white;
     border-bottom: 1px solid #eadbdf;
     padding: 18px 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
 }
 
 .site-header a {
@@ -38,4 +42,26 @@ body {
 
 .site-header b {
     color: #8f1938;
+}
+
+.header-note {
+    margin: 0 0 0 auto;
+    font-size: 14px;
+    color: #70666b;
+}
+
+.login {
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #8f1938;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-left: 0;
+}
+
+.login:hover {
+    text-decoration: underline;
 }
