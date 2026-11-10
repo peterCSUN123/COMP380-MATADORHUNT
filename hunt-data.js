@@ -2,10 +2,10 @@
 (function (root) {
     const riddles = [
         {
-            id: 'clue-1', title: 'Tae Mo Malaki',
-            question: 'I am big, but sometimes watery',
-            answers: ['shit', 'poop', 'burnik', 'tae'],
-            hints: ['I am big but sometimes small', 'My keys include letters and numbers.', 'My longest key is usually the space bar.']
+            id: 'clue-1', title: 'The Silent Teacher',
+            question: 'I hold a thousand voices, yet rarely make a sound. When Matadors need answers, within my walls they’re found. What am I?',
+            answers: ['Library', 'University Library', 'library'],
+            hints: ['Students visit me to research and study.', 'You can borrow some of what I hold.', 'My fourth floor has a Quiet Study Lounge.']
         },
         {
             id: 'clue-2', title: 'Every Step Counts',
