@@ -20,16 +20,16 @@
             hints: ['You look at me when you are running late.', 'My hands move in circles.', 'I show hours and minutes.']
         },
         {
-            id: 'clue-4', title: 'The Drying Paradox',
-            question: 'The more I dry, the wetter I get. What am I?',
-            answers: ['towel', 'a towel', 'bath towel', 'a bath towel'],
-            hints: ['I am usually made from fabric.', 'You often find me in a bathroom.', 'You use me after a shower.']
+            id: 'clue-4', title: 'The tree that taught me',
+            question: 'Im named after a purple flowering tree what am I?',
+            answers: ['Jacaranda', 'Jacaranda building', 'jacaranda', 'jacaranda building'],
+            hints: ['I hold a lot of nerds.', ' You can see the library from the front of the building.']
         },
         {
-            id: 'clue-5', title: 'A Voice Returned',
-            question: 'I repeat what you say, but I have no mouth. Call into a canyon and you might hear me. What am I?',
-            answers: ['echo', 'an echo', 'a echo'],
-            hints: ['I am something you hear.', 'I happen when sound reflects from a surface.', 'Shout hello, and I answer hello.']
+            id: 'clue-5', title: 'The Campus Chime ',
+            question: 'You cant see me but you can hear me and you will know what time it is. What am I ?',
+            answers: ['Clock Tower', 'Csun Clock tower', 'Csun clock'],
+            hints: ['I am something you hear.', 'I make sound in specific times ', 'I ring specfic amount of times depending on what time it is.']
         },
         {
             id: 'clue-6', title: 'The Paper Explorer',
