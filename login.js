@@ -1,45 +1,43 @@
-const form = document.getElementById("loginForm");
-const message = document.getElementById("loginMessage");
+// Replace your old login.js with this version.
+// It supports the original login-card form and a form with id="loginForm".
+const form = document.getElementById('loginForm') || document.querySelector('.login-card form');
+let message = document.getElementById('loginMessage');
+if (!message) {
+    message = document.createElement('p');
+    message.id = 'loginMessage';
+    message.setAttribute('role', 'status');
+    form.append(message);
+}
 
-form.addEventListener("submit", function (event) {
+form.elements.username.required = true;
+form.elements.password.required = true;
+form.elements.username.autocomplete = 'username';
+form.elements.password.autocomplete = 'current-password';
+
+form.addEventListener('submit', function (event) {
     event.preventDefault();
-
     const username = form.elements.username.value.trim();
     const password = form.elements.password.value;
-
     try {
-        // Read accounts saved during sign-up.
-        const users = JSON.parse(
-            localStorage.getItem("matadorUsers") || "[]"
-        );
-
-        if (!Array.isArray(users)) {
-            throw new Error("Invalid saved account data.");
-        }
-
-        // Find an account with a matching username and password.
+        const users = JSON.parse(localStorage.getItem('matadorUsers') || '[]');
+        if (!Array.isArray(users)) throw new Error('Invalid saved account data.');
         const user = users.find(account =>
+            typeof account?.username === 'string' &&
             account.username.toLowerCase() === username.toLowerCase() &&
             account.password === password
         );
-
         if (!user) {
-            message.textContent = "Incorrect username or password.";
+            message.textContent = 'Incorrect username or password.';
             return;
         }
-
-        // Remember who is signed in for this browser tab.
-        sessionStorage.setItem("currentUser", user.username);
-
-        message.textContent =
-            "Signed in as " + user.username +
-            "! Your score: " + user.score;
-
-        form.elements.password.value = "";
+        sessionStorage.setItem('currentUser', user.username);
+        window.location.href = 'hunt.html';
     } catch (error) {
-        message.textContent =
-            "Could not sign in. Check your browser storage.";
-
+        message.textContent = 'Could not sign in. Check your browser storage.';
         console.error(error);
     }
+});
+
+document.querySelector('.site-header .login')?.addEventListener('click', () => {
+    form.elements.username.focus();
 });

@@ -1,0 +1,122 @@
+:root {
+    --red: #8f1938;
+    --red-dark: #70112a;
+    --ink: #282127;
+    --muted: #756870;
+    --line: #ead9dd;
+    --pink: #f9ebef;
+    --canvas: #fbf8f8;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--canvas); color: var(--ink); font-family: Arial, sans-serif; }
+button, input { font: inherit; }
+button, a, input { -webkit-tap-highlight-color: transparent; }
+button { cursor: pointer; }
+button:disabled { opacity: .55; cursor: default; }
+button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid #bd657c; outline-offset: 4px; }
+.site-header { background: #fff; border-bottom: 1px solid var(--line); }
+.header-inner { max-width: 1280px; min-height: 82px; margin: auto; padding: 18px 24px; display: flex; align-items: center; gap: 32px; }
+.brand { display: flex; align-items: center; gap: 12px; color: var(--ink); text-decoration: none; font-weight: 800; font-size: 18px; letter-spacing: 1.5px; }
+.brand b { color: var(--red); }
+.brand-icon { width: 41px; height: 41px; border-radius: 13px; display: grid; place-items: center; background: var(--red); color: #fff; font-size: 26px; letter-spacing: 0; }
+.header-note { margin: 0 0 0 auto; font-size: 13px; color: var(--muted); }
+.text-button { border: 0; padding: 8px 0; background: transparent; color: var(--red); font-weight: 700; }
+.text-button:hover { text-decoration: underline; }
+.page { max-width: 1280px; margin: 0 auto; padding: 44px 24px 0; }
+.welcome { display: flex; justify-content: space-between; align-items: center; gap: 28px; margin-bottom: 36px; }
+.eyebrow { font-size: 12px; font-weight: 800; letter-spacing: 1.8px; line-height: 1.5; color: var(--red); margin: 10px 0 20px; }
+h1 { margin: 0 0 18px; font-size: clamp(34px, 4vw, 54px); letter-spacing: -2px; line-height: 1.12; overflow-wrap: anywhere; }
+h1 span { color: var(--red); }
+.subtitle { margin: 0; color: var(--muted); font-size: 17px; line-height: 1.65; }
+.score-card { flex: 0 0 151px; text-align: center; color: #fff; background: var(--red); border-radius: 22px; padding: 22px 18px; }
+.score-card span { display: block; font-size: 11px; font-weight: 800; letter-spacing: 1.2px; }
+.score-card strong { display: block; margin-top: 8px; font-size: 40px; line-height: 1; }
+.tabs { display: flex; gap: 8px; border-bottom: 1px solid var(--line); overflow-x: auto; }
+.tabs button { background: transparent; border: 0; border-bottom: 3px solid transparent; padding: 16px 18px; color: var(--muted); font-weight: 700; white-space: nowrap; }
+.tabs button[aria-selected="true"] { color: var(--red); border-bottom-color: var(--red); }
+.section-heading { display: flex; justify-content: space-between; align-items: end; gap: 16px; margin: 32px 0 24px; }
+.section-heading .eyebrow { margin: 0 0 10px; }
+h2 { margin: 0; font-size: 32px; letter-spacing: -.9px; line-height: 1.25; }
+.badge { display: inline-block; white-space: nowrap; padding: 10px 15px; border-radius: 999px; background: var(--pink); color: var(--red); font-size: 13px; font-weight: 700; }
+.riddle-layout { display: grid; grid-template-columns: 347px minmax(0, 1fr); gap: 22px; align-items: start; }
+.clue-list { display: grid; gap: 10px; }
+.clue-button { width: 100%; min-height: 111px; text-align: left; background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 18px 21px; color: var(--ink); }
+.clue-button[aria-pressed="true"] { border-color: var(--red); box-shadow: 0 0 0 2px rgba(143,25,56,.05); }
+.clue-button:hover { border-color: #bd657c; }
+.clue-button .eyebrow { display: block; margin: 0 0 7px; font-size: 11px; }
+.clue-button strong { display: block; font-size: 17px; line-height: 1.4; }
+.clue-button .clue-status { display: block; margin-top: 6px; color: var(--muted); font-size: 13px; }
+.clue-button.solved .clue-status { color: #28704a; }
+.riddle-card, .panel-card { background: #fff; border: 1px solid var(--line); border-radius: 22px; padding: 32px; box-shadow: 0 14px 35px rgba(73,29,42,.025); }
+.riddle-card > .eyebrow { margin: 0 0 14px; }
+.riddle-card h2 { font-size: 30px; }
+.question { font-size: 17px; line-height: 1.8; color: var(--muted); margin: 20px 0 24px; }
+.hint-box { border: 1px solid var(--line); background: var(--canvas); border-radius: 16px; padding: 21px; margin-bottom: 24px; }
+h3 { margin: 0 0 14px; font-size: 17px; line-height: 1.4; }
+.hint-box p, .hint-box ol { color: var(--muted); font-size: 14px; line-height: 1.7; }
+.hint-box ol { padding-left: 23px; }
+.hint-box li + li { margin-top: 7px; }
+.outline-button, .primary-button { padding: 13px 16px; border-radius: 12px; font-weight: 700; line-height: 1.4; }
+.outline-button { color: var(--red); background: #fff; border: 1px solid var(--red); }
+.outline-button:hover:not(:disabled) { background: var(--pink); }
+.primary-button { color: #fff; background: var(--red); border: 1px solid var(--red); }
+.primary-button:hover:not(:disabled) { background: var(--red-dark); }
+.answer-form { display: flex; gap: 12px; }
+.answer-form input { flex: 1; width: 0; min-width: 0; border: 1px solid var(--line); border-radius: 12px; padding: 15px; }
+.muted { color: var(--muted); font-size: 14px; line-height: 1.7; }
+.answer-message { margin-bottom: 0; font-size: 15px; line-height: 1.6; }
+.answer-message.error { color: #a11736; }
+.answer-message.success, .completion { color: #28704a; }
+.completion { border-top: 1px solid var(--line); padding-top: 20px; font-weight: 700; }
+progress { display: block; width: 100%; height: 14px; margin: 18px 0 28px; accent-color: var(--red); border: 0; border-radius: 10px; }
+progress::-webkit-progress-bar { background: var(--pink); border-radius: 10px; }
+progress::-webkit-progress-value { background: var(--red); border-radius: 10px; }
+.table-scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; text-align: left; font-size: 14px; }
+th { color: var(--muted); font-size: 12px; }
+th, td { padding: 17px 12px; border-bottom: 1px solid var(--line); line-height: 1.5; }
+th:first-child, td:first-child { padding-left: 0; }
+tbody tr:last-child td { border-bottom: 0; }
+tr.current-player { color: var(--red); font-weight: 700; }
+.settings-card { max-width: 760px; }
+.settings-card hr { border: 0; border-top: 1px solid var(--line); margin: 30px 0; }
+.footer { margin-top: 48px; border-top: 1px solid var(--line); padding: 24px 0 32px; color: var(--muted); font-size: 12px; text-align: center; }
+.page-error { margin: 40px auto; max-width: 900px; padding: 24px; line-height: 1.7; color: var(--red); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+@media (max-width: 1000px) {
+    .riddle-layout { grid-template-columns: 270px minmax(0, 1fr); }
+    .riddle-card { padding: 24px; }
+    .answer-form { flex-direction: column; }
+    .answer-form input { width: 100%; }
+}
+@media (max-width: 720px) {
+    .header-inner { gap: 16px; padding: 15px 20px; }
+    .header-note { display: none; }
+    .header-inner > button { margin-left: auto; font-size: 13px; }
+    .brand { font-size: 14px; gap: 9px; letter-spacing: 1px; }
+    .brand-icon { width: 35px; height: 35px; font-size: 23px; }
+    .page { padding: 30px 20px 0; }
+    .welcome { align-items: start; gap: 16px; margin-bottom: 24px; }
+    .welcome .eyebrow { font-size: 10px; margin: 0 0 15px; }
+    h1 { font-size: 34px; letter-spacing: -1.2px; }
+    .subtitle { font-size: 14px; }
+    .score-card { flex-basis: 100px; padding: 18px 10px; border-radius: 16px; }
+    .score-card span { font-size: 9px; letter-spacing: .5px; }
+    .score-card strong { font-size: 32px; }
+    .tabs button { padding: 14px 12px; font-size: 14px; }
+    h2 { font-size: 26px; }
+    .section-heading { align-items: center; }
+    .badge { font-size: 11px; padding: 9px 11px; }
+    .riddle-layout { grid-template-columns: minmax(0, 1fr); }
+    .clue-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .clue-button { min-height: 115px; padding: 15px; }
+    .clue-button strong { font-size: 15px; }
+    .clue-button .clue-status { font-size: 12px; }
+    .riddle-card, .panel-card { padding: 22px; }
+    .riddle-card h2 { font-size: 27px; }
+    .hint-box { padding: 17px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+    button { transition: background-color .15s, border-color .15s; }
+}

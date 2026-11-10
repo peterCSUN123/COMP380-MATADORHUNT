@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your hunt | Matador Hunt</title>
+    <link rel="stylesheet" href="hunt.css">
+    <script src="hunt-data.js" defer></script>
+    <script src="hunt.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html" aria-label="Matador Hunt home">
+                <span class="brand-icon" aria-hidden="true">M</span>
+                <span>MATADOR <b>HUNT</b></span>
+            </a>
+            <p class="header-note">Six riddles. One hunt.</p>
+            <button id="switchPlayer" class="text-button" type="button">Switch player</button>
+        </div>
+    </header>
+
+    <p id="pageError" class="page-error" role="alert" hidden></p>
+    <main id="huntPage" class="page" hidden>
+        <section class="welcome" aria-labelledby="welcomeHeading">
+            <div>
+                <p class="eyebrow">YOUR HUNT IS UNDERWAY</p>
+                <h1 id="welcomeHeading">Welcome, <span id="playerName"></span>.</h1>
+                <p class="subtitle">Choose a clue, think it through, and earn your points.</p>
+            </div>
+            <div class="score-card" aria-label="Total points">
+                <span>TOTAL POINTS</span>
+                <strong id="totalPoints">0</strong>
+            </div>
+        </section>
+
+        <nav class="tabs" role="tablist" aria-label="Hunt sections">
+            <button id="tabRiddles" role="tab" aria-selected="true" aria-controls="riddlesPanel" type="button">Riddles</button>
+            <button id="tabProgress" role="tab" aria-selected="false" aria-controls="progressPanel" tabindex="-1" type="button">Progress</button>
+            <button id="tabLeaderboard" role="tab" aria-selected="false" aria-controls="leaderboardPanel" tabindex="-1" type="button">Local leaderboard</button>
+            <button id="tabSettings" role="tab" aria-selected="false" aria-controls="settingsPanel" tabindex="-1" type="button">Settings</button>
+        </nav>
+        <p id="exportMessage" class="muted" role="status" hidden></p>
+
+        <section id="riddlesPanel" role="tabpanel" aria-labelledby="tabRiddles">
+            <div class="section-heading">
+                <div><p class="eyebrow">FOLLOW THE CLUES</p><h2>Available riddles</h2></div>
+                <span id="solvedBadge" class="badge">0 of 6 solved</span>
+            </div>
+            <div class="riddle-layout">
+                <div id="clueList" class="clue-list" aria-label="Choose a riddle"></div>
+                <article class="riddle-card" aria-labelledby="riddleTitle">
+                    <p id="clueNumber" class="eyebrow"></p>
+                    <h2 id="riddleTitle"></h2>
+                    <p id="riddleQuestion" class="question"></p>
+                    <section class="hint-box" aria-labelledby="hintHeading">
+                        <h3 id="hintHeading">Hints: <span id="hintCount">0 / 3</span></h3>
+                        <p>Hints reduce the possible 10 points by 1, then 2, then 3.</p>
+                        <ol id="hintList"></ol>
+                        <button id="revealHint" class="outline-button" type="button">Reveal next hint</button>
+                    </section>
+                    <form id="answerForm" class="answer-form">
+                        <label class="sr-only" for="answer">Your answer</label>
+                        <input id="answer" name="answer" type="text" placeholder="Type your answer" autocomplete="off" maxlength="120" required>
+                        <button id="submitAnswer" class="primary-button" type="submit">Submit answer</button>
+                    </form>
+                    <p id="attempts" class="muted"></p>
+                    <p id="answerMessage" class="answer-message" role="status" aria-live="polite"></p>
+                    <div id="completedMessage" class="completion" hidden>
+                        <p>All six solved. You completed the hunt!</p>
+                        <button id="saveCompletedResults" class="primary-button" type="button">Save results (.txt)</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="progressPanel" role="tabpanel" aria-labelledby="tabProgress" hidden>
+            <div class="section-heading"><div><p class="eyebrow">EVERY CLUE COUNTS</p><h2>Your progress</h2></div></div>
+            <div class="panel-card">
+                <label id="progressLabel" for="huntProgress"></label>
+                <progress id="huntProgress" max="6" value="0"></progress>
+                <div class="table-scroll"><table>
+                    <thead><tr><th>Riddle</th><th>Status</th><th>Hints</th><th>Points earned</th></tr></thead>
+                    <tbody id="progressRows"></tbody>
+                </table></div>
+            </div>
+        </section>
+
+        <section id="leaderboardPanel" role="tabpanel" aria-labelledby="tabLeaderboard" hidden>
+            <div class="section-heading">
+                <div><p class="eyebrow">THE HUNT, TOGETHER</p><h2>Local leaderboard</h2></div>
+                <button id="saveResults" class="primary-button" type="button">Save results (.txt)</button>
+            </div>
+            <div class="panel-card">
+                <p class="muted">Players saved in this browser, on this website.</p>
+                <div class="table-scroll"><table>
+                    <thead><tr><th>Rank</th><th>Player</th><th>Solved</th><th>Points</th></tr></thead>
+                    <tbody id="leaderboardRows"></tbody>
+                </table></div>
+            </div>
+        </section>
+
+        <section id="settingsPanel" role="tabpanel" aria-labelledby="tabSettings" hidden>
+            <div class="section-heading"><div><p class="eyebrow">YOUR NEXT MOVE</p><h2>Settings</h2></div></div>
+            <div class="panel-card settings-card">
+                <h3>Start a fresh hunt</h3>
+                <p class="muted">Clear your points, hints, solved riddles, and answer locks. Your account stays saved.</p>
+                <button id="resetProgress" class="outline-button" type="button">Reset my progress</button>
+                <hr>
+                <h3>Play as someone else</h3>
+                <p class="muted">Your progress is saved when you switch players.</p>
+                <button id="settingsSwitch" class="primary-button" type="button">Switch player</button>
+                <p id="settingsMessage" role="status"></p>
+            </div>
+        </section>
+        <footer class="footer">Six riddles. One hunt. Make every clue count.</footer>
+    </main>
+    <noscript><p class="page-error">Enable JavaScript to play Matador Hunt.</p></noscript>
+</body>
+</html>

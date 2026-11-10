@@ -50,21 +50,6 @@ body {
     color: #70666b;
 }
 
-.login {
-    padding: 0;
-    border: none;
-    background: transparent;
-    color: #8f1938;
-    font-family: inherit;
-    font-size: 18px;
-    font-weight: 700;
-    cursor: pointer;
-    margin-left: 0;
-}
-
-.login:hover {
-    text-decoration: underline;
-}
 
 /* Introduction layout */
 .intro {
