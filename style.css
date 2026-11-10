@@ -65,3 +65,158 @@ body {
 .login:hover {
     text-decoration: underline;
 }
+
+/* Introduction layout */
+.intro {
+    max-width: 1232px;
+    min-height: calc(100vh - 82px);
+    margin: 0 auto;
+    padding: 70px 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Small red heading */
+.intro-text {
+    color: #8f1938;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 1.6;
+}
+
+/* Main heading */
+.intro h1 {
+    margin: 22px 0;
+    color: #282127;
+    font-size: 68px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -3px;
+}
+
+.intro h1 em {
+    color: #8f1938;
+    font-style: normal;
+}
+
+/* Description */
+.intro > p {
+    max-width: 480px;
+    margin: 4px 0 0;
+    color: #756870;
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+/* Three rules side by side */
+.rules {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+
+    width: 100%;
+    max-width: 460px;
+    margin-top: 48px;
+}
+
+.rules > div {
+    border-top: 3px solid #8f1938;
+    padding-top: 20px;
+}
+
+/* Rule numbers */
+.rules strong {
+    display: block;
+    margin-bottom: 4px;
+    color: #8f1938;
+    font-size: 32px;
+    line-height: 1;
+}
+
+/* Rule descriptions */
+.rules span {
+    display: block;
+    color: #756870;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.login-card {
+    background-color: white;
+    border: 1px solid #ead9dd;
+    border-radius: 26px;
+    padding: 34px;
+    box-shadow: 0 15px 45px rgba(50, 20, 30, 0.06);
+}
+
+.login-card h2 {
+    margin: 18px 0 28px;
+    color: #252124;
+    font-size: 30px;
+}
+
+.login-card form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-card label {
+    margin-bottom: 8px;
+    color: #252124;
+    font-weight: bold;
+}
+
+.login-card input {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ead9dd;
+    border-radius: 12px;
+    font: inherit;
+}
+
+.login-card button {
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    background-color: #921638;
+    color: white;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.home-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 350px;
+    align-items: center;
+    gap: 80px;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 60px 24px;
+}
+
+.home-layout .intro {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    margin: 0;
+}
+
+.button-acc {
+    margin: 5px;
+}
+
+.signup-layout {
+    max-width: 450px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+#message {
+    line-height: 1.5;
+}
