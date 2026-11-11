@@ -19,7 +19,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
 .header-inner { max-width: 1280px; min-height: 82px; margin: auto; padding: 18px 24px; display: flex; align-items: center; gap: 32px; }
 .brand { display: flex; align-items: center; gap: 12px; color: var(--ink); text-decoration: none; font-weight: 800; font-size: 18px; letter-spacing: 1.5px; }
 .brand b { color: var(--red); }
-.brand-icon { width: 41px; height: 41px; border-radius: 13px; display: grid; place-items: center; background: var(--red); color: #fff; font-size: 26px; letter-spacing: 0; }
+.brand-icon { width: 41px; height: 41px; display: block; object-fit: contain; flex-shrink: 0; }
 .header-note { margin: 0 0 0 auto; font-size: 13px; color: var(--muted); }
 .text-button { border: 0; padding: 8px 0; background: transparent; color: var(--red); font-weight: 700; }
 .text-button:hover { text-decoration: underline; }
@@ -95,7 +95,7 @@ tr.current-player { color: var(--red); font-weight: 700; }
     .header-note { display: none; }
     .header-inner > button { margin-left: auto; font-size: 13px; }
     .brand { font-size: 14px; gap: 9px; letter-spacing: 1px; }
-    .brand-icon { width: 35px; height: 35px; font-size: 23px; }
+    .brand-icon { width: 35px; height: 35px; }
     .page { padding: 30px 20px 0; }
     .welcome { align-items: start; gap: 16px; margin-bottom: 24px; }
     .welcome .eyebrow { font-size: 10px; margin: 0 0 15px; }
