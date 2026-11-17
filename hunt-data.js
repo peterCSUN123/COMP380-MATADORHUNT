@@ -10,8 +10,8 @@
         {
             id: 'clue-2', title: 'The green escape',
             question: 'Im very green and I hold a lot of different variates of animals and plants. What am I?',
-            answers: ['Botcanical garden', 'botcanical garden', 'Garden', 'garden' 'Csun garden' 'csun garden' ],
-            hints: ['I need to be watered' 'Im in a closed enviroment at certain times but also open to the public during the day']
+            answers: ['Botcanical garden', 'botcanical garden', 'Garden', 'garden','Csun garden','csun garden' ],
+            hints: ['I need to be watered','Im in a closed enviroment at certain times but also open to the public during the day']
         },
         {
             id: 'clue-3', title: '',
@@ -34,7 +34,7 @@
         {
             id: 'clue-6', title: 'Sky watchers',
             question: 'I hide in the orange grove and im really into astronomy. I also can see things from really far away. What am i?',
-            answers: ['Csun observatory,''csun observatory' ' Csun Telescope' ],
+            answers: ['Csun observatory','csun observatory', ' Csun Telescope' ],
             hints: ['Im big', 'I stand out in the orange grove.', 'I zoom in and out.']
         }
     ];
