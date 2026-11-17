@@ -2,19 +2,19 @@
 (function (root) {
     const riddles = [
         {
-            id: 'clue-1', title: 'The Silent Teacher',
-            question: 'I hold a thousand voices, yet rarely make a sound. When Matadors need answers, within my walls they’re found. What am I?',
-            answers: ['Library', 'University Library', 'library'],
-            hints: ['Students visit me to research and study.', 'You can borrow some of what I hold.', 'My fourth floor has a Quiet Study Lounge.']
+            id: 'clue-1', title: 'Tiny campus boss',
+            question: 'You see me everywhere and sometimes I eat your food. What am I?',
+            answers: ['Squirrel', 'squirrel', 'Csun Squirrel'],
+            hints: ['Im brown.', 'Im skinny and fat.', 'I like nuts.']
         },
         {
-            id: 'clue-2', title: 'Every Step Counts',
-            question: 'I go up and down, but I never move. People take me one step at a time. What am I?',
-            answers: ['stairs', 'the stairs', 'staircase', 'a staircase', 'a flight of stairs'],
-            hints: ['You find me between floors.', 'You use your feet to travel along me.', 'I am an alternative to an elevator.']
+            id: 'clue-2', title: 'The green escape',
+            question: 'Im very green and I hold a lot of different variates of animals and plants. What am I?',
+            answers: ['Botcanical garden', 'botcanical garden', 'Garden', 'garden' 'Csun garden' 'csun garden' ],
+            hints: ['I need to be watered' 'Im in a closed enviroment at certain times but also open to the public during the day']
         },
         {
-            id: 'clue-3', title: 'Always on Time',
+            id: 'clue-3', title: '',
             question: 'I have a face and two hands, but no arms or legs. What am I?',
             answers: ['clock', 'a clock', 'wall clock', 'a wall clock', 'watch', 'a watch'],
             hints: ['You look at me when you are running late.', 'My hands move in circles.', 'I show hours and minutes.']
@@ -32,10 +32,10 @@
             hints: ['I am something you hear.', 'I make sound in specific times ', 'I ring specfic amount of times depending on what time it is.']
         },
         {
-            id: 'clue-6', title: 'The Paper Explorer',
-            question: 'I have cities but no houses, forests but no trees, and rivers but no water. What am I?',
-            answers: ['map', 'a map', 'atlas', 'an atlas'],
-            hints: ['I can help you plan a journey.', 'I show places using symbols and labels.', 'You use me to find your way.']
+            id: 'clue-6', title: 'Sky watchers',
+            question: 'I hide in the orange grove and im really into astronomy. I also can see things from really far away. What am i?',
+            answers: ['Csun observatory,''csun observatory' ' Csun Telescope' ],
+            hints: ['Im big', 'I stand out in the orange grove.', 'I zoom in and out.']
         }
     ];
     const DAY = 24 * 60 * 60 * 1000;
