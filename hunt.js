@@ -188,7 +188,7 @@
             url = URL.createObjectURL(file);
             link = document.createElement('a');
             link.href = url;
-            link.download = 'matador-hunt-results-' + new Date().toISOString().replace(/[:.]/g, '-') + '.txt';
+            link.download = 'matador-hunt-results-' +  new Date().toISOString().replace('T', '_').replace('Z', '').replace(/[:.]/g, '-') + '.txt';
             document.body.append(link);
             link.click();
             message.textContent = 'Results download requested. Check your browser’s downloads.';
